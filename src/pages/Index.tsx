@@ -54,7 +54,7 @@ export default function Index() {
           }}>
             Никита
           </h1>
-          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.2rem, 3vw, 1.8rem)", color: "#b8965a", fontWeight: 700, letterSpacing: "0.15em", fontStyle: "italic" }}>
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.2rem, 3vw, 1.8rem)", color: "#3d2c1e", fontWeight: 700, letterSpacing: "0.15em", fontStyle: "italic" }}>
             &amp; Елизавета
           </p>
 

@@ -35,7 +35,7 @@ export default function Index() {
         {/* Gold decorative lines */}
         <div className="relative z-10 text-center px-6 py-20">
           <p className="tracking-[0.4em] uppercase text-xs mb-8" style={{ color: "#b8965a", fontFamily: "'Montserrat', sans-serif", fontWeight: 500 }}>
-            Мы приглашаем вас разделить с нами самый главный день в нашей жизни
+            Мы приглашаем вас разделить с нами<br />самый главный день в нашей жизни
           </p>
 
           <div className="flex items-center justify-center gap-4 mb-2">

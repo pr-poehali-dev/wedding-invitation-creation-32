@@ -57,10 +57,19 @@ def handler(event: dict, context) -> dict:
     msg['To'] = 'lizaiv18@gmail.com'
     msg.attach(MIMEText(html, 'html', 'utf-8'))
 
-    smtp_password = os.environ.get('SMTP_PASSWORD', '')
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-        server.login('lizaiv18@gmail.com', smtp_password)
-        server.sendmail('lizaiv18@gmail.com', 'lizaiv18@gmail.com', msg.as_string())
+    smtp_password = os.environ.get('SMTP_PASSWORD', '').strip()
+    if not smtp_password:
+        print('ERROR: SMTP_PASSWORD is not set')
+        return {'statusCode': 500, 'headers': headers, 'body': json.dumps({'error': 'SMTP_PASSWORD not configured'})}
+
+    try:
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+            server.login('lizaiv18@gmail.com', smtp_password)
+            server.sendmail('lizaiv18@gmail.com', 'lizaiv18@gmail.com', msg.as_string())
+        print(f'Email sent successfully for guest: {name}')
+    except Exception as e:
+        print(f'ERROR sending email: {e}')
+        return {'statusCode': 500, 'headers': headers, 'body': json.dumps({'error': str(e)})}
 
     return {
         'statusCode': 200,

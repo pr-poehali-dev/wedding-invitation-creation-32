@@ -47,15 +47,15 @@ export default function Index() {
           <h1 className="mb-2" style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(3.5rem, 10vw, 7rem)",
-            fontWeight: 300,
+            fontWeight: 700,
             color: "#3d2c1e",
             lineHeight: 1.05,
             letterSpacing: "0.02em"
           }}>
-            Елизавета
+            Никита
           </h1>
-          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.2rem, 3vw, 1.8rem)", color: "#b8965a", fontWeight: 400, letterSpacing: "0.15em", fontStyle: "italic" }}>
-            &amp; Никита
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.2rem, 3vw, 1.8rem)", color: "#b8965a", fontWeight: 700, letterSpacing: "0.15em", fontStyle: "italic" }}>
+            &amp; Елизавета
           </p>
 
           <div className="flex items-center justify-center gap-4 mt-6 mb-10">
@@ -316,7 +316,7 @@ export default function Index() {
       {/* Footer */}
       <footer className="py-14 text-center" style={{ background: "#3d2c1e" }}>
         <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", color: "#e8d5bc", fontWeight: 300, fontStyle: "italic" }}>
-          Елизавета &amp; Никита
+          Никита &amp; Елизавета
         </p>
         <div className="flex items-center justify-center gap-3 mt-3">
           <div className="h-px w-10" style={{ background: "#c9a96e", opacity: 0.5 }} />

@@ -12,13 +12,26 @@ const program = [
   { time: "23:00", event: "Продолжение праздника", icon: "Sparkles" },
 ];
 
+const RSVP_URL = "https://functions.poehali.dev/58607415-7327-4889-aaa0-fa79d4fb50d1";
+
 export default function Index() {
   const [form, setForm] = useState({ name: "", guests: "1", attend: "yes", wishes: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      await fetch(RSVP_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -314,8 +327,9 @@ export default function Index() {
                 }}
                 onMouseEnter={e => (e.target as HTMLElement).style.background = "#b8965a"}
                 onMouseLeave={e => (e.target as HTMLElement).style.background = "#c9a96e"}
+                disabled={loading}
               >
-                Отправить ответ
+                {loading ? "Отправляем..." : "Отправить ответ"}
               </button>
             </form>
           )}

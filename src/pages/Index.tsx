@@ -38,13 +38,25 @@ export default function Index() {
             Мы приглашаем вас разделить с нами<br />самый главный день в нашей жизни
           </p>
 
-          <div className="flex items-center justify-center gap-4 mb-2">
+          <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-16" style={{ background: "linear-gradient(to right, transparent, #c9a96e)" }} />
             <span style={{ color: "#c9a96e", fontSize: "1.2rem" }}>✦</span>
             <div className="h-px w-16" style={{ background: "linear-gradient(to left, transparent, #c9a96e)" }} />
           </div>
 
-          <h1 className="mb-2" style={{
+          <p style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: "clamp(1.4rem, 3vw, 2rem)",
+            fontWeight: 400,
+            color: "#3d2c1e",
+            letterSpacing: "0.3em",
+            textTransform: "uppercase",
+            marginBottom: "1rem"
+          }}>
+            Свадьба
+          </p>
+
+          <h1 className="mb-0" style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(3.5rem, 10vw, 7rem)",
             fontWeight: 700,
@@ -52,11 +64,8 @@ export default function Index() {
             lineHeight: 1.05,
             letterSpacing: "0.02em"
           }}>
-            Никита
+            Никита &amp; Елизавета
           </h1>
-          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.2rem, 3vw, 1.8rem)", color: "#3d2c1e", fontWeight: 700, letterSpacing: "0.15em", fontStyle: "italic" }}>
-            &amp; Елизавета
-          </p>
 
           <div className="flex items-center justify-center gap-4 mt-6 mb-10">
             <div className="h-px w-16" style={{ background: "linear-gradient(to right, transparent, #c9a96e)" }} />
